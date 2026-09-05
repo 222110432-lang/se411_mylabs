@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.psu.se411</groupId>
+    <artifactId>Lab04</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Lab04</name>
+<description>This is a Maven and JavaFX lab project for SE411.</description>
+<url>https://example.com/lab04</url>
+
+<licenses>
+    <license>
+        <name>Apache License 2.0</name>
+        <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+</licenses>
+
+<organization>
+    <name>SE411 Lab Team</name>
+    <url>https://example.com</url>
+</organization>
+
+<developers>
+    <developer>
+        <name>Abdullah Alorabi</name>
+        <email>student@example.com</email>
+    </developer>
+</developers>
+<properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>23</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>edu.psu.se411.lab04.App</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
