@@ -1,0 +1,11 @@
+SE411 Lab 8 verification
+Verified on 2026-10-11 14:10:01 UTC
+Runtime: OpenJDK 17.0.20
+Build tool: Apache Maven 3.9.9
+Maven goals: clean package exec:java
+Result: BUILD SUCCESS
+Tests run: 14; failures: 0; errors: 0; skipped: 0
+Application start and stop events verified in logs/App/log4j/log.out.
+Ten normal reading cycles verified. Removal stopped dashboard notifications. The clone started with zero observers and maintained independent readings and registration. All 22 logger updates were written to the file.
+The sample output and log are copies from the executed demonstration.
+The Windows launcher was reviewed; the build was executed on Linux.

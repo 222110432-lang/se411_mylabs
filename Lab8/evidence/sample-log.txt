@@ -1,0 +1,24 @@
+2026-10-11 07:08:07,828 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.App - Application is starting...
+2026-10-11 07:08:07,830 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 31.49259867558915 C
+2026-10-11 07:08:07,830 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 52.19177388434851 %
+2026-10-11 07:08:08,831 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 27.657961888332284 C
+2026-10-11 07:08:08,831 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 42.28763734274462 %
+2026-10-11 07:08:09,832 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 21.571555123620477 C
+2026-10-11 07:08:09,832 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 57.67991053118862 %
+2026-10-11 07:08:10,833 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 20.428231616745716 C
+2026-10-11 07:08:10,833 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 53.209321046015845 %
+2026-10-11 07:08:11,834 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 22.25466313005379 C
+2026-10-11 07:08:11,834 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 51.57789793894336 %
+2026-10-11 07:08:12,835 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 23.635264287001668 C
+2026-10-11 07:08:12,835 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 44.217747259737855 %
+2026-10-11 07:08:13,836 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 22.949547429572593 C
+2026-10-11 07:08:13,836 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 42.15518647801735 %
+2026-10-11 07:08:14,837 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 32.60595784460294 C
+2026-10-11 07:08:14,837 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 43.744376761946995 %
+2026-10-11 07:08:15,838 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 32.472432631113406 C
+2026-10-11 07:08:15,838 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 54.122891815999694 %
+2026-10-11 07:08:16,839 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 23.30454423875984 C
+2026-10-11 07:08:16,839 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 58.80612142938484 %
+2026-10-11 07:08:17,840 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Humidity sensor = 65.0 %
+2026-10-11 07:08:17,841 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.LoggerObserver - Main logger received Temperature sensor = 26.0 C
+2026-10-11 07:08:17,841 INFO [edu.spu.se411.lab08.App.main()] edu.spu.se411.lab08.App - Application is stopping...

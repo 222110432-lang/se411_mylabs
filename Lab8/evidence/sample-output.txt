@@ -1,0 +1,76 @@
+Lab 08 - Observer Pattern
+
+Reading cycle 1
+[Dashboard: Main dashboard] Temperature sensor = 31.49 C
+[Logger: Main logger] Temperature sensor = 31.49 C
+[Dashboard: Main dashboard] Humidity sensor = 52.19 %
+[Logger: Main logger] Humidity sensor = 52.19 %
+
+Reading cycle 2
+[Dashboard: Main dashboard] Temperature sensor = 27.66 C
+[Logger: Main logger] Temperature sensor = 27.66 C
+[Dashboard: Main dashboard] Humidity sensor = 42.29 %
+[Logger: Main logger] Humidity sensor = 42.29 %
+
+Reading cycle 3
+[Dashboard: Main dashboard] Temperature sensor = 21.57 C
+[Logger: Main logger] Temperature sensor = 21.57 C
+[Dashboard: Main dashboard] Humidity sensor = 57.68 %
+[Logger: Main logger] Humidity sensor = 57.68 %
+
+Reading cycle 4
+[Dashboard: Main dashboard] Temperature sensor = 20.43 C
+[Logger: Main logger] Temperature sensor = 20.43 C
+[Dashboard: Main dashboard] Humidity sensor = 53.21 %
+[Logger: Main logger] Humidity sensor = 53.21 %
+
+Reading cycle 5
+[Dashboard: Main dashboard] Temperature sensor = 22.25 C
+[Logger: Main logger] Temperature sensor = 22.25 C
+[Dashboard: Main dashboard] Humidity sensor = 51.58 %
+[Logger: Main logger] Humidity sensor = 51.58 %
+
+Reading cycle 6
+[Dashboard: Main dashboard] Temperature sensor = 23.64 C
+[Logger: Main logger] Temperature sensor = 23.64 C
+[Dashboard: Main dashboard] Humidity sensor = 44.22 %
+[Logger: Main logger] Humidity sensor = 44.22 %
+
+Reading cycle 7
+[Dashboard: Main dashboard] Temperature sensor = 22.95 C
+[Logger: Main logger] Temperature sensor = 22.95 C
+[Dashboard: Main dashboard] Humidity sensor = 42.16 %
+[Logger: Main logger] Humidity sensor = 42.16 %
+
+Reading cycle 8
+[Dashboard: Main dashboard] Temperature sensor = 32.61 C
+[Logger: Main logger] Temperature sensor = 32.61 C
+[Dashboard: Main dashboard] Humidity sensor = 43.74 %
+[Logger: Main logger] Humidity sensor = 43.74 %
+
+Reading cycle 9
+[Dashboard: Main dashboard] Temperature sensor = 32.47 C
+[Logger: Main logger] Temperature sensor = 32.47 C
+[Dashboard: Main dashboard] Humidity sensor = 54.12 %
+[Logger: Main logger] Humidity sensor = 54.12 %
+
+Reading cycle 10
+[Dashboard: Main dashboard] Temperature sensor = 23.30 C
+[Logger: Main logger] Temperature sensor = 23.30 C
+[Dashboard: Main dashboard] Humidity sensor = 58.81 %
+[Logger: Main logger] Humidity sensor = 58.81 %
+
+Unregistration: only the logger receives the next humidity update.
+[Logger: Main logger] Humidity sensor = 65.00 %
+
+Cloning: the copy starts without observers.
+Original observers: 2; clone observers: 0
+Updating the unobserved clone produces no observer messages.
+Updating the clone notifies only its own dashboard.
+[Dashboard: Clone dashboard] Temperature sensor = 31.00 C
+Updating the original notifies its original dashboard and logger.
+[Dashboard: Main dashboard] Temperature sensor = 26.00 C
+[Logger: Main logger] Temperature sensor = 26.00 C
+Independent readings: original = 26.00 C; clone = 31.00 C
+
+File log: logs/App/log4j/log.out
