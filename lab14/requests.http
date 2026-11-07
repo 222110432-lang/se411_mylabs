@@ -1,0 +1,25 @@
+### All courses
+GET http://localhost:8080/api/v1/courses
+### Create (201): use the returned Location for the next requests
+POST http://localhost:8080/api/v1/courses
+Content-Type: application/json
+
+{"code":"SE411","name":"Software Construction","description":"Lab course","credits":3}
+
+### Read: replace 3 with the created id
+GET http://localhost:8080/api/v1/courses/3
+
+### Update (204)
+PUT http://localhost:8080/api/v1/courses/3
+Content-Type: application/json
+
+{"code":"SE411","name":"Updated Construction","description":"Updated lab course","credits":4}
+
+### Delete (204)
+DELETE http://localhost:8080/api/v1/courses/3
+
+### Invalid request (400)
+POST http://localhost:8080/api/v1/courses
+Content-Type: application/json
+
+{"id":-1,"code":"","name":"X","credits":11}
