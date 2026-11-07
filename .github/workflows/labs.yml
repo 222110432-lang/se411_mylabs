@@ -1,0 +1,70 @@
+name: Verify SE411 labs
+on:
+  push:
+    paths: ['lab09/**', 'lab11/**', 'lab12/**', 'lab13/**', 'lab14/**', 'lab15/**', '.github/workflows/labs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  java-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lab: [lab09, lab11, lab12, lab13, lab14, lab15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build and test
+        run: mvn -B -f ${{ matrix.lab }}/pom.xml clean verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.lab }}
+          path: ${{ matrix.lab }}/target/surefire-reports/
+  mysql:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: disposable-lab-test
+          MYSQL_DATABASE: se411db
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -pdisposable-lab-test"
+          --health-interval=10s --health-timeout=5s --health-retries=12
+    env:
+      DB_URL: jdbc:mysql://localhost:3306/se411db?sslMode=DISABLED&allowPublicKeyRetrieval=true
+      DB_USERNAME: root
+      DB_PASSWORD: disposable-lab-test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Package
+        run: mvn -B -f lab15/pom.xml -DskipTests package
+      - name: Real MySQL CRUD and restart persistence
+        shell: bash
+        run: |
+          java -jar lab15/target/lab15-1.0-SNAPSHOT.jar --spring.profiles.active=init > lab15-init.log 2>&1 &
+          APP_PID=$!
+          trap 'kill "$APP_PID" 2>/dev/null || true' EXIT
+          python3 lab15/tests/mysql_smoke.py create
+          kill "$APP_PID"
+          wait "$APP_PID" || true
+          java -jar lab15/target/lab15-1.0-SNAPSHOT.jar > lab15-restart.log 2>&1 &
+          APP_PID=$!
+          python3 lab15/tests/mysql_smoke.py verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mysql-run-logs
+          path: lab15-*.log
