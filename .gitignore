@@ -27,3 +27,13 @@ Lab03/target/
 Lab03/.settings/
 Lab03/.classpath
 Lab03/.project
+
+# Maven builds and local runtime settings
+target/
+logs/
+.classpath
+.project
+.settings/
+.env
+application-local.properties
+persistence-id.txt
